@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MADPractical2</string>
+    <string name="togbtn1off">Follow</string>
+    <string name="togbtn2on">Unfollow</string>
+    <string name="togbtn3off">Message</string>
+    <string name="togbtn4on">Messaged</string>
 </resources>
