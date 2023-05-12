@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         ToggleButton togBut1 = findViewById(R.id.toggleButton);
         togBut1.setText("Follow");
 
-        if(myUser.userFollowed){
+        if(!myUser.userFollowed){
             togBut1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
