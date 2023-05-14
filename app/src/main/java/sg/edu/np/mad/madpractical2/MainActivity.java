@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         myUser.getUserName();
         myUser.getUserDescription();
 
+        // myUser.setUserFollowed(false);
         myUser.userFollowed = false;
         myUser.isUserFollowed();
 
@@ -31,26 +32,23 @@ public class MainActivity extends AppCompatActivity {
         tv1.setText("Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua");
 
         ToggleButton togBut1 = findViewById(R.id.toggleButton);
-        togBut1.setText("Follow");
+        togBut1.setText(myUser.isUserFollowed() ? "Unfollow" : "Follow");
 
-        if(!myUser.userFollowed){
-            togBut1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    togBut1.getTextOff();
+        togBut1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toggle the text and update the follow status
+                if (myUser.isUserFollowed()) {
+                    togBut1.setText("Follow");
+                    Log.v(TITLE, "Toggle Button: Unfollow clicked!");
+                    myUser.setUserFollowed(false);
+                } else {
+                    togBut1.setText("Unfollow");
                     Log.v(TITLE, "Toggle Button: Follow clicked!");
+                    myUser.setUserFollowed(true);
                 }
-            });
-        }
-        else{
-            togBut1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    togBut1.getTextOn();
-                    Log.v(TITLE, "Toggle Button: Follow not clicked!");
-                }
-            });
-        }
+            }
+        });
 
         ToggleButton togBut2 = findViewById(R.id.toggleButton3);
         togBut2.setText("Message");
