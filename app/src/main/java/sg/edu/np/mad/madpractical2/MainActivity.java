@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         myUser.getUserName();
         myUser.getUserDescription();
 
-        // myUser.setUserFollowed(false);
         myUser.userFollowed = false;
         myUser.isUserFollowed();
 
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         togBut1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Toggle the text and update the follow status
                 if (myUser.isUserFollowed()) {
                     togBut1.setText("Follow");
                     Log.v(TITLE, "Toggle Button: Unfollow clicked!");
