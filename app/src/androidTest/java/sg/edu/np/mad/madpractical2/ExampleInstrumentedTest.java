@@ -1,4 +1,4 @@
-package sg.edu.np.mad.madpractical;
+package sg.edu.np.mad.madpractical2;
 
 import android.content.Context;
 
